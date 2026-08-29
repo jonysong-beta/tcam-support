@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <link rel="icon" type="image/png" href="{{ '/assets/app-icon.png' | relative_url }}">
+  <style>
+    :root {
+      /* tCam Japanese stationery palette (from DesignSystem/ColorTokens.swift) */
+      --cloud-paper: #F5F4FA;
+      --sumi-ink: #24222D;
+      --camera-indigo: #5F6F9F;
+      --film-lavender: #AAA7E6;
+      --yuzu-shutter: #FFC83D;
+      --sticker-paper: #FFFDF7;
+      --cutline-gray: #625B57;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--cloud-paper);
+      color: var(--sumi-ink);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+                   "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 8px;
+    }
+    header img {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px; /* squircle-ish, iOS icon feel */
+      box-shadow: 0 4px 14px rgba(36, 34, 45, 0.12);
+    }
+    header .brand {
+      font-family: ui-rounded, "SF Pro Rounded", -apple-system, "PingFang SC",
+                   system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 0.01em;
+    }
+    header .tagline {
+      font-size: 0.85rem;
+      color: var(--cutline-gray);
+    }
+    main {
+      max-width: 720px;
+      margin: 16px auto 64px;
+      padding: 32px 36px;
+      background: var(--sticker-paper);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(36, 34, 45, 0.07);
+    }
+    h1, h2, h3 {
+      font-family: ui-rounded, "SF Pro Rounded", -apple-system, "PingFang SC",
+                   system-ui, sans-serif;
+      line-height: 1.4;
+    }
+    h1 {
+      font-size: 1.6rem;
+      margin: 0 0 4px;
+      padding-bottom: 16px;
+      border-bottom: 2px dashed var(--film-lavender); /* sticker cutline */
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin-top: 2em;
+      padding-left: 12px;
+      border-left: 4px solid var(--yuzu-shutter); /* shutter yellow accent */
+    }
+    a { color: var(--camera-indigo); }
+    strong { color: var(--sumi-ink); }
+    footer {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 48px;
+      font-size: 0.8rem;
+      color: var(--cutline-gray);
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      main { margin: 8px 12px 48px; padding: 24px 20px; }
+      header { padding-top: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="{{ '/assets/app-icon.png' | relative_url }}" alt="tCam贴贴相机图标">
+    <div>
+      <div class="brand">tCam贴贴相机</div>
+      <div class="tagline">先贴贴,再拍照。</div>
+    </div>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer>tCam贴贴相机 · 隐私政策</footer>
+</body>
+</html>

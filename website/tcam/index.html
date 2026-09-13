@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tCam 贴贴相机｜先贴贴，再拍照</title>
+  <meta name="description" content="tCam 贴贴相机：把人物、宠物、喜欢的小东西做成贴纸，先放进实时镜头，再和眼前的世界一起按下快门。">
+  <link rel="canonical" href="https://aizst.com/tcam/">
+  <meta name="theme-color" content="#24222D">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="tCam 贴贴相机">
+  <meta property="og:title" content="tCam 贴贴相机｜先贴贴，再拍照">
+  <meta property="og:description" content="把喜欢的，先贴进相机里。贴纸先进入实时取景，然后才按下快门。">
+  <meta property="og:url" content="https://aizst.com/tcam/">
+  <meta property="og:image" content="https://aizst.com/tcam/assets/app-icon-512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/tcam/assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="/tcam/assets/app-icon-180.png">
+  <link rel="stylesheet" href="/tcam/css/tcam.css">
+</head>
+<body>
+
+  <header class="site-nav">
+    <a class="brand" href="/tcam/" aria-label="tCam 贴贴相机首页">
+      <img src="/tcam/assets/app-icon-180.png" alt="tCam 贴贴相机图标" width="40" height="40">
+      <span>tCam 贴贴相机</span>
+    </a>
+    <nav class="links" aria-label="站点导航">
+      <a href="/tcam/support/">支持</a>
+      <a href="/tcam/privacy/">隐私政策</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 深色夜空 Hero -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-copy fade-in">
+          <p class="hero-eyebrow">先贴贴，再拍照</p>
+          <h1 class="hero-title">把喜欢的，<br>先贴进相机里。</h1>
+          <p class="hero-lede">
+            把人物、宠物、喜欢的小东西做成贴纸，先放进实时镜头，再和眼前的世界一起按下快门。
+          </p>
+          <p class="hero-note">
+            没在身边的，可以一起入镜；脑海里的，也可以跑进现实。
+          </p>
+        </div>
+
+        <div class="hero-art fade-in-late" aria-hidden="true">
+          <!-- 夜空背景：弯月与星点；IP 吉祥物位图叠加其上 -->
+          <svg viewBox="0 0 440 380">
+            <defs>
+              <filter id="rough" x="-8%" y="-8%" width="116%" height="116%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" result="n" seed="7"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2"/>
+              </filter>
+              <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+                <feGaussianBlur stdDeviation="14"/>
+              </filter>
+            </defs>
+
+            <!-- 弯月：克制的暖黄 -->
+            <mask id="mooncut">
+              <rect x="318" y="38" width="72" height="72" fill="#fff"/>
+              <circle cx="360" cy="66" r="13.5" fill="#000"/>
+            </mask>
+            <circle cx="352" cy="72" r="30" fill="#FFC83D" opacity="0.28" filter="url(#soft)"/>
+            <circle cx="352" cy="72" r="16" fill="#FFC83D" filter="url(#rough)" mask="url(#mooncut)"/>
+
+            <!-- 星点：轻微呼吸 -->
+            <g class="star-breathe">
+              <path d="M78 54 l3.2 8 8 3.2 -8 3.2 -3.2 8 -3.2 -8 -8 -3.2 8 -3.2 z" fill="#FFFDF7" opacity="0.9" filter="url(#rough)"/>
+            </g>
+            <g class="star-breathe delay">
+              <path d="M396 176 l2.4 6 6 2.4 -6 2.4 -2.4 6 -2.4 -6 -6 -2.4 6 -2.4 z" fill="#AAA7E6" opacity="0.9" filter="url(#rough)"/>
+            </g>
+
+          </svg>
+          <img class="mascot mascot-bob" src="/tcam/assets/mascot-camera.png" alt="" width="320" height="320">
+        </div>
+      </div>
+    </section>
+
+    <!-- 产品理念：米白阅读层 -->
+    <section class="section">
+      <div class="section-inner prose">
+        <h2 class="section-title">不是拍完再加贴纸。</h2>
+        <p class="section-lede">
+          在 tCam，贴纸先进入实时取景，然后才按下快门。
+          你看到的画面，就是<span class="nb">拍下来的画面。</span>
+        </p>
+
+        <div class="flow">
+          <div class="flow-step">
+            <svg viewBox="0 0 72 72" aria-hidden="true">
+              <g filter="url(#rough)">
+                <rect x="12" y="12" width="48" height="48" rx="12" fill="#AAA7E6" fill-opacity="0.25"
+                      stroke="#5F6F9F" stroke-width="3" stroke-dasharray="7 5" stroke-linecap="round"/>
+                <path d="M36 26 l3.4 8.6 8.6 3.4 -8.6 3.4 -3.4 8.6 -3.4 -8.6 -8.6 -3.4 8.6 -3.4 z" fill="#5F6F9F"/>
+              </g>
+            </svg>
+            <div>
+              <p class="step-label">做贴纸</p>
+              <p class="step-desc">从相册选一张照片，把喜欢的部分剪成贴纸。</p>
+            </div>
+          </div>
+          <div class="flow-step">
+            <svg viewBox="0 0 72 72" aria-hidden="true">
+              <g filter="url(#rough)" fill="none" stroke-linecap="round">
+                <path d="M14 26 v-8 a4 4 0 0 1 4 -4 h8 M46 14 h8 a4 4 0 0 1 4 4 v8 M58 46 v8 a4 4 0 0 1 -4 4 h-8 M26 58 h-8 a4 4 0 0 1 -4 -4 v-8"
+                      stroke="#5F6F9F" stroke-width="3"/>
+                <path d="M36 27 l3 7.6 7.6 3 -7.6 3 -3 7.6 -3 -7.6 -7.6 -3 7.6 -3 z" fill="#FFC83D" stroke="none"/>
+              </g>
+            </svg>
+            <div>
+              <p class="step-label">放进镜头</p>
+              <p class="step-desc">贴纸出现在实时取景里，拖动、缩放、旋转，摆到刚好的位置。</p>
+            </div>
+          </div>
+          <div class="flow-step">
+            <svg viewBox="0 0 72 72" aria-hidden="true">
+              <g filter="url(#rough)">
+                <circle cx="36" cy="36" r="22" fill="#FFC83D" fill-opacity="0.3" stroke="#24222D" stroke-width="3"/>
+                <circle cx="36" cy="36" r="12" fill="#FFC83D"/>
+              </g>
+            </svg>
+            <div>
+              <p class="step-label">拍下来</p>
+              <p class="step-desc">按下快门，贴纸和眼前的世界一起被拍进照片或短片。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-brand">
+        tCam 贴贴相机
+      </span>
+      <nav aria-label="页脚导航">
+        <a href="/tcam/privacy/">隐私政策</a>
+        <a href="/tcam/support/">支持</a>
+      </nav>
+      <span class="copyright">© 2026 Cheng Song</span>
+    </div>
+  </footer>
+
+</body>
+</html>
